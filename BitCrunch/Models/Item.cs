@@ -6,5 +6,6 @@ namespace BitCrunch.Models
         string Description { get; set; }
         int Quantity { get; set; }
         string StoreName { get; set; }
+        string Console { get; set; }
     }
 }

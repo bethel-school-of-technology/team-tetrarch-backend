@@ -4,19 +4,19 @@ namespace BitCrunch.Models
 {
     public class User
     {
-        int UserID { get; set; }
+        public int UserId { get; set; }
         [Required]
-        string UserName { get; set; }
+        public string UserName { get; set; }
         [Required]
-        string Password { get; set; }
+        public string Password { get; set; }
         [Required]
-        string Email { get; set; }
+        public string Email { get; set; }
         [Required]
-        string StoreName { get; set; }
+        public string StoreName { get; set; }
         [Required]
-        string City { get; set; }
+        public string City { get; set; }
         [Required]
-        string State { get; set; }
+        public string State { get; set; }
 
     }
 }
