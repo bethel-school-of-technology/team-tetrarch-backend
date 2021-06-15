@@ -34,6 +34,11 @@ namespace BitCrunch.Controllers
             }
             return item;
         }
+        [HttpGet, Route("{ItemName:string}")]
+        public IEnumerable<Item> GetItemsByName(string itemName)
+        {
+            return _itemRepository.GetItemsByName(itemName);
+        }
         [HttpGet, Route("{StoreName:string}")]
         public IEnumerable<Item> GetItemsByStoreName(string storeName)
         {
