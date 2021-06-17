@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using BitCrunch.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace BitCrunch
 {
@@ -30,6 +31,7 @@ namespace BitCrunch
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Data Source=Bitcrunch.db"));
             services.AddSingleton<IItemRepository, MockItemRepository>();
             services.AddSingleton<IUserRepository, MockUserRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -51,8 +53,6 @@ namespace BitCrunch
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BitCrunch v1"));
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

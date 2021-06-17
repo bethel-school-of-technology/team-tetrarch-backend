@@ -1,76 +1,108 @@
+using System;
 using System.Collections.Generic;
-using System.Net;
-using BitCrunch.Models;
-using BitCrunch.Repositories;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using BitCrunch;
+using BitCrunch.Models;
 
 namespace BitCrunch.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
-    public class ItemsController : ControllerBase 
+    public class ItemsController : ControllerBase
     {
-        private readonly ILogger<ItemsController> _logger;
-        private readonly IItemRepository _itemRepository;
-        public ItemsController(ILogger<ItemsController> logger, IItemRepository repo )
+        private readonly AppDbContext _context;
+
+        public ItemsController(AppDbContext context)
         {
-            _itemRepository = repo;
-            _logger = logger;
+            _context = context;
         }
-        
+
+        // GET: api/Items
         [HttpGet]
-        public IEnumerable<Item> GetItems()
+        public async Task<ActionResult<IEnumerable<Item>>> GetItems()
         {
-            return _itemRepository.GetItems();
+            return await _context.Items.ToListAsync();
         }
-        [HttpGet, Route("{ItemID:int}")]
-        public Item GetItemById(int itemId)
+
+        // GET: api/Items/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Item>> GetItem(int id)
         {
-            var item = _itemRepository.GetItemById(itemId);
+            var item = await _context.Items.FindAsync(id);
+
             if (item == null)
             {
-                Response.StatusCode = (int) HttpStatusCode.NotFound;return null;
+                return NotFound();
             }
+
             return item;
         }
-        [HttpGet, Route("{ItemName:string}")]
-        public IEnumerable<Item> GetItemsByName(string itemName)
+
+        // PUT: api/Items/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutItem(int id, Item item)
         {
-            return _itemRepository.GetItemsByName(itemName);
+            if (id != item.ItemID)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(item).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ItemExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
-        [HttpGet, Route("{StoreName:string}")]
-        public IEnumerable<Item> GetItemsByStoreName(string storeName)
-        {
-            return _itemRepository.GetItemsByStoreName(storeName);
-        }
+
+        // POST: api/Items
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public Item CreateItem(Item item)
+        public async Task<ActionResult<Item>> PostItem(Item item)
         {
-            if (item == null || !ModelState.IsValid)
-            {
-                Response.StatusCode = (int) HttpStatusCode.BadRequest;
-                return null;
-            }
-            var newItem = _itemRepository.CreateItem(item);
-            return newItem;
+            _context.Items.Add(item);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetItem", new { id = item.ItemID }, item);
         }
-        [HttpPut, Route("{ItemID:int}")]
-        public Item UpdateItem(Item item)
+
+        // DELETE: api/Items/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteItem(int id)
         {
-            if (item == null || !ModelState.IsValid)
+            var item = await _context.Items.FindAsync(id);
+            if (item == null)
             {
-                Response.StatusCode = (int) HttpStatusCode.BadRequest;
-                return null;
+                return NotFound();
             }
-            var newItem = _itemRepository.UpdateItem(item);
-            return newItem;
+
+            _context.Items.Remove(item);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
-        [HttpDelete, Route("{ItemID:int}")]
-        public void DeleteItem(int ItemId)
+
+        private bool ItemExists(int id)
         {
-            _itemRepository.DeleteItem(ItemId);
-            Response.StatusCode = (int) HttpStatusCode.NoContent;
+            return _context.Items.Any(e => e.ItemID == id);
         }
     }
 }
