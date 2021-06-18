@@ -14,7 +14,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using BitCrunch.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 
@@ -32,9 +31,8 @@ namespace BitCrunch
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
-            services.AddSingleton<IItemRepository, MockItemRepository>();
-            services.AddSingleton<IUserRepository, MockUserRepository>();
+            services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=BitCrunch.db"));
+            
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAdB2C"));
 

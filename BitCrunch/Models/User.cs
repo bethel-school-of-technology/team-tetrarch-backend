@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BitCrunch.Models
 {
@@ -18,6 +19,7 @@ namespace BitCrunch.Models
         public string City { get; set; }
         [Required]
         public string State { get; set; }
+        public bool IsAdmin { get; set; }
 
     }
 }

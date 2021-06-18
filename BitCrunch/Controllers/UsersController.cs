@@ -45,6 +45,7 @@ namespace BitCrunch.Controllers
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.UserId)
@@ -76,12 +77,17 @@ namespace BitCrunch.Controllers
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult<User>> PostUser(User user)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
+                return CreatedAtAction("GetUser", new { id = user.UserId }, user);
+            }
+            return user;
         }
 
         // DELETE: api/Users/5
