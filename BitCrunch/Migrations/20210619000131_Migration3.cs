@@ -2,7 +2,7 @@
 
 namespace BitCrunch.Migrations
 {
-    public partial class Migration2 : Migration
+    public partial class Migration3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -36,7 +36,7 @@ namespace BitCrunch.Migrations
                     StoreName = table.Column<string>(type: "TEXT", nullable: false),
                     City = table.Column<string>(type: "TEXT", nullable: false),
                     State = table.Column<string>(type: "TEXT", nullable: false),
-                    IsAdmin = table.Column<bool>(type: "INTEGER", nullable: false)
+                    IsAdmin = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

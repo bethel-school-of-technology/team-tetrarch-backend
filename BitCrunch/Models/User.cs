@@ -19,7 +19,8 @@ namespace BitCrunch.Models
         public string City { get; set; }
         [Required]
         public string State { get; set; }
-        public bool IsAdmin { get; set; }
+        [Range(0,1)]
+        public int IsAdmin { get; set; }
 
     }
 }

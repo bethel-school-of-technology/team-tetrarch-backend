@@ -1,0 +1,11 @@
+Setup anti Forgery tokens
+
+Create Login Route for users.
+
+Create search Route to search for items by name.
+
+Create search Route to search for items by Store name.
+
+Create Bearer authentication for item editing and posting.
+
+randomize user and item IDs on creation for security reasons.

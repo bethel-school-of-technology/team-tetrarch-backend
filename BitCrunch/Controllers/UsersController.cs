@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BitCrunch;
 using BitCrunch.Models;
+using BitCrunch.Services;
 
 namespace BitCrunch.Controllers
 {
@@ -45,7 +46,6 @@ namespace BitCrunch.Controllers
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.UserId)
@@ -77,15 +77,24 @@ namespace BitCrunch.Controllers
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<ActionResult<User>> PostUser(User user)
         {
             if (ModelState.IsValid)
             {
+                Console.WriteLine("working 1");
+                //here is the password validation
+                user.Password = ManualAuth.Sha256(user.Password);
+                Console.WriteLine("working 2");
                 _context.Users.Add(user);
+                Console.WriteLine("working 3");
                 await _context.SaveChangesAsync();
-
+                Console.WriteLine("working 4");
                 return CreatedAtAction("GetUser", new { id = user.UserId }, user);
+            }
+            else
+            {
+                Console.WriteLine("Not Working");
             }
             return user;
         }

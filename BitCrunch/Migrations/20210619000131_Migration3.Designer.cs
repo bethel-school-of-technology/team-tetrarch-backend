@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BitCrunch.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210618221606_Migration2")]
-    partial class Migration2
+    [Migration("20210619000131_Migration3")]
+    partial class Migration3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -62,7 +62,7 @@ namespace BitCrunch.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsAdmin")
+                    b.Property<int>("IsAdmin")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Password")

@@ -36,7 +36,7 @@ namespace BitCrunch
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAdB2C"));
 
-            services.AddControllers();
+            services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BitCrunch", Version = "v1" });

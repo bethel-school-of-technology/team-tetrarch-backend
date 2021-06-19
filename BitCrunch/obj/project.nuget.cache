@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BEfS0vH489NHqRFE/J0zh7PAJXIpSItVV8iFp/DsfOlmJSxpUhojFuO8YfxAZR+XaC0IIHn8i3sdkhIKRR0LsA==",
+  "dgSpecHash": "o3iVb///VVUjd0zXzOxPkDdJXFxeHdU2LxKAOD93i2pGZGgEk6JJl6x8cG63+b2Za2mRP/UQVorsMKColK+qDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\Bitcrunch\\BitCrunch.csproj",
+  "projectFilePath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\scull\\.nuget\\packages\\azure.core\\1.4.1\\azure.core.1.4.1.nupkg.sha512",
     "C:\\Users\\scull\\.nuget\\packages\\azure.identity\\1.2.3\\azure.identity.1.2.3.nupkg.sha512",

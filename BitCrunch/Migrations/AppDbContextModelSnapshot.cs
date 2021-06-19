@@ -60,7 +60,7 @@ namespace BitCrunch.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsAdmin")
+                    b.Property<int>("IsAdmin")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Password")
