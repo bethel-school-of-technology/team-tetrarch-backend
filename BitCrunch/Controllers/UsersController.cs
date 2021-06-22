@@ -1,4 +1,5 @@
 using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -97,6 +98,24 @@ namespace BitCrunch.Controllers
                 Console.WriteLine("Not Working");
             }
             return user;
+        }
+
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                User GetUser = await _context.Users.SingleOrDefaultAsync(u => u.UserName == user.UserName);
+                if (GetUser != null)
+                {
+                    if (ManualAuth.SHA256Check(user.Password, GetUser.Password))
+                    {
+                        return GetUser(user.UserId);
+                    }
+                }
+
+            }
         }
 
         // DELETE: api/Users/5

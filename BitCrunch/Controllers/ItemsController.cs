@@ -42,6 +42,32 @@ namespace BitCrunch.Controllers
             return item;
         }
 
+        [HttpGet("name/{name}")]
+        public async Task<ActionResult<Item>> GetItembyName(string name)
+        {
+            var item = await _context.Items.FindAsync(name);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            return item;
+        }
+
+        [HttpGet("store/{name}")]
+        public async Task<ActionResult<Item>> GetItembyStoreName(string name)
+        {
+            var item = await _context.Items.FindAsync(name);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            return item;
+        }
+
         // PUT: api/Items/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

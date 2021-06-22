@@ -16,5 +16,14 @@ namespace BitCrunch.Services
             }
             return hash.ToString();
         }
+        public static bool SHA256Check(string userInput, string valueToCompare)
+        {
+            string hashedInput = ManualAuth.Sha256(userInput);
+            if (valueToCompare == hashedInput)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
