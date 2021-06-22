@@ -1,5 +1,4 @@
 using System;
-using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using BitCrunch;
 using BitCrunch.Models;
 using BitCrunch.Services;
+using System.Net;
+using System.Web.Http;
 
 namespace BitCrunch.Controllers
 {
@@ -83,14 +84,11 @@ namespace BitCrunch.Controllers
         {
             if (ModelState.IsValid)
             {
-                Console.WriteLine("working 1");
+            
                 //here is the password validation
                 user.Password = ManualAuth.Sha256(user.Password);
-                Console.WriteLine("working 2");
                 _context.Users.Add(user);
-                Console.WriteLine("working 3");
                 await _context.SaveChangesAsync();
-                Console.WriteLine("working 4");
                 return CreatedAtAction("GetUser", new { id = user.UserId }, user);
             }
             else
@@ -111,11 +109,12 @@ namespace BitCrunch.Controllers
                 {
                     if (ManualAuth.SHA256Check(user.Password, GetUser.Password))
                     {
-                        return GetUser(user.UserId);
+                        return GetUser();
                     }
                 }
 
             }
+            throw new HttpResponseException(HttpStatusCode.Unauthorized);
         }
 
         // DELETE: api/Users/5
