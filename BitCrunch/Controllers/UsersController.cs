@@ -98,7 +98,7 @@ namespace BitCrunch.Controllers
             return user;
         }
 
-        [HttpPost]
+        [HttpPost("userName")]
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(User user)
         {
@@ -109,7 +109,7 @@ namespace BitCrunch.Controllers
                 {
                     if (ManualAuth.SHA256Check(user.Password, GetUser.Password))
                     {
-                        return GetUser();
+                        return Ok(GetUser);
                     }
                 }
 
