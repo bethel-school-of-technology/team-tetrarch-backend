@@ -73,7 +73,7 @@ namespace BitCrunch.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok(user);
         }
 
         // POST: api/Users
