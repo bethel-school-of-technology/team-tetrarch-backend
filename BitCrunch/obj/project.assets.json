@@ -9359,19 +9359,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\scull\\.nuget\\packages\\": {}
+    "C:\\Users\\joshu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\Bitcrunch\\BitCrunch.csproj",
+      "projectUniqueName": "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
       "projectName": "BitCrunch",
-      "projectPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\Bitcrunch\\BitCrunch.csproj",
-      "packagesPath": "C:\\Users\\scull\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\Bitcrunch\\obj\\",
+      "projectPath": "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
+      "packagesPath": "C:\\Users\\joshu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\BitCrunch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\scull\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\joshu\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -9466,7 +9466,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
