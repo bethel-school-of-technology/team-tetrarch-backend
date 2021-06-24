@@ -11,13 +11,9 @@ namespace BitCrunch.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-        [Required]
         public string Email { get; set; }
-        [Required]
         public string StoreName { get; set; }
-        [Required]
         public string City { get; set; }
-        [Required]
         public string State { get; set; }
         [Range(0,1)]
         public int IsAdmin { get; set; }

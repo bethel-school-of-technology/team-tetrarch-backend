@@ -1,11 +1,15 @@
 Setup anti Forgery tokens
 
-Create Login Route for users.
+Create Login Route for users. #Done
 
-Create search Route to search for items by name.
+Add hashing to the User Put function. 
 
-Create search Route to search for items by Store name.
+Change requirements for the User Model to just Username and Passwords.
 
-Create Bearer authentication for item editing and posting.
+Create search Route to search for items by name. #Half-done
+
+Create search Route to search for items by Store name. #Done
+
+Create Bearer authentication for item editing and posting. 
 
 randomize user and item IDs on creation for security reasons.

@@ -50,6 +50,7 @@ namespace BitCrunch.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
+            
             if (id != user.UserId)
             {
                 return BadRequest();

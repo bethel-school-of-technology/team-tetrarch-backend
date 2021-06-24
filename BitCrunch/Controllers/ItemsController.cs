@@ -36,7 +36,7 @@ namespace BitCrunch.Controllers
 
             if (item == null)
             {
-                return NotFound();
+                return StatusCode(418);
             }
 
             return item;
@@ -49,7 +49,7 @@ namespace BitCrunch.Controllers
 
             if (item == null)
             {
-                return NotFound();
+                return StatusCode(418);
             }
 
             return item;

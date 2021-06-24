@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj": {}
+    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj": {
+    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
+        "projectUniqueName": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj",
         "projectName": "BitCrunch",
-        "projectPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
+        "projectPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj",
         "packagesPath": "C:\\Users\\scull\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\obj\\",
+        "outputPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\scull\\AppData\\Roaming\\NuGet\\NuGet.Config"
