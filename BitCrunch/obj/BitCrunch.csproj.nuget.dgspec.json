@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj": {}
+    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj": {
+    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj",
+        "projectUniqueName": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
         "projectName": "BitCrunch",
-        "projectPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj",
+        "projectPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
         "packagesPath": "C:\\Users\\scull\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\obj\\",
+        "outputPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\scull\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -85,6 +85,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

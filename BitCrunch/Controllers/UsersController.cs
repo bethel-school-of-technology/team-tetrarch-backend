@@ -103,17 +103,23 @@ namespace BitCrunch.Controllers
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(User user)
         {
-            if (ModelState.IsValid)
+            if (true)
             {
-                User GetUser = await _context.Users.SingleOrDefaultAsync(u => u.UserName == user.UserName);
+                Console.WriteLine("arrived at 108" + user.UserName);
+                User GetUser = await _context.Users.FirstOrDefaultAsync(u => u.UserName == user.UserName);
                 if (GetUser != null)
                 {
+                    Console.WriteLine("arrived at 112");
                     if (ManualAuth.SHA256Check(user.Password, GetUser.Password))
                     {
+                        Console.WriteLine("arrived at 115");
                         return Ok(GetUser);
                     }
+                    Console.WriteLine("First Not Found");
+                    return NotFound();
                 }
-
+                Console.WriteLine("Second NotFound");
+                return NotFound();
             }
             throw new HttpResponseException(HttpStatusCode.Unauthorized);
         }

@@ -37,6 +37,10 @@ namespace BitCrunch
                 .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAdB2C"));
 
             services.AddControllersWithViews();
+            services.AddCors(c=> {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                c.AddPolicy("AllowAnyHeader", options => options.AllowAnyHeader());
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BitCrunch", Version = "v1" });
@@ -57,7 +61,12 @@ namespace BitCrunch
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseCors(
+                options => {
+                    options.AllowAnyOrigin();
+                    options.AllowAnyHeader();
+                }
+            );
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
