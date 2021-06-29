@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj": {}
+    "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj": {
+    "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
+        "projectUniqueName": "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj",
         "projectName": "BitCrunch",
-        "projectPath": "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
+        "projectPath": "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj",
         "packagesPath": "C:\\Users\\joshu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\BitCrunch\\obj\\",
+        "outputPath": "C:\\Users\\joshu\\Desktop\\BitCrunch\\team-tetrarch-backend\\bitcrunch\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joshu\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "LinqKit.Core": {
+              "target": "Package",
+              "version": "[1.1.24, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.4, )"
@@ -85,6 +89,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

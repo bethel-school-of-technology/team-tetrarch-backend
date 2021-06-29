@@ -167,6 +167,7 @@ C:\Users\scull\Documents\GitHub\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0
 C:\Users\scull\Documents\GitHub\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\scull\Documents\GitHub\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.WebApiCompatShim.dll
 C:\Users\scull\Documents\GitHub\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+<<<<<<< HEAD
 C:\Users\joshu\Desktop\BitCrunch\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\joshu\Desktop\BitCrunch\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0\appsettings.json
 C:\Users\joshu\Desktop\BitCrunch\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0\BitCrunch.exe
@@ -336,3 +337,7 @@ C:\Users\joshu\Desktop\BitCrunch\team-tetrarch-backend\BitCrunch\obj\Debug\net5.
 C:\Users\joshu\Desktop\BitCrunch\team-tetrarch-backend\BitCrunch\obj\Debug\net5.0\ref\BitCrunch.dll
 C:\Users\joshu\Desktop\BitCrunch\team-tetrarch-backend\BitCrunch\obj\Debug\net5.0\BitCrunch.pdb
 C:\Users\joshu\Desktop\BitCrunch\team-tetrarch-backend\BitCrunch\obj\Debug\net5.0\BitCrunch.genruntimeconfig.cache
+=======
+C:\Users\scull\Documents\GitHub\team-tetrarch-backend\bitcrunch\bin\Debug\net5.0\LinqKit.Core.dll
+>>>>>>> 66f0d705fa0ead66a5aaa5790d39a45fbe621ec1
+C:\Users\joshu\Desktop\BitCrunch\team-tetrarch-backend\bitcrunch\bin\Debug\net5.0\LinqKit.Core.dll
