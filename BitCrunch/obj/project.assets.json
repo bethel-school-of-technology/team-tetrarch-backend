@@ -77,6 +77,15 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "LinqKit.Core/1.1.24": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/LinqKit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/LinqKit.Core.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -3130,6 +3139,36 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "LinqKit.Core/1.1.24": {
+      "sha512": "IsRZtjO8Eo2WFR9BjvXhigF/BjSepJgjlqh4XqNscR9cUFbAsG791wOq6eNzGHUbJ70pGsT8rSqNzBZYl80s4w==",
+      "type": "package",
+      "path": "linqkit.core/1.1.24",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/LinqKit.Core.dll",
+        "lib/net35/LinqKit.Core.xml",
+        "lib/net40/LinqKit.Core.dll",
+        "lib/net40/LinqKit.Core.xml",
+        "lib/net45/LinqKit.Core.dll",
+        "lib/net45/LinqKit.Core.xml",
+        "lib/netstandard1.3/LinqKit.Core.dll",
+        "lib/netstandard1.3/LinqKit.Core.xml",
+        "lib/netstandard2.0/LinqKit.Core.dll",
+        "lib/netstandard2.0/LinqKit.Core.xml",
+        "lib/netstandard2.1/LinqKit.Core.dll",
+        "lib/netstandard2.1/LinqKit.Core.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/LinqKit.Core.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/LinqKit.Core.xml",
+        "lib/portable45-net45+win8+wp8+wpa81/LinqKit.Core.dll",
+        "lib/portable45-net45+win8+wp8+wpa81/LinqKit.Core.xml",
+        "lib/uap10.0.10240/LinqKit.Core.dll",
+        "lib/uap10.0.10240/LinqKit.Core.pri",
+        "lib/uap10.0.10240/LinqKit.Core.xml",
+        "linqkit.core.1.1.24.nupkg.sha512",
+        "linqkit.core.nuspec"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -9341,6 +9380,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "LinqKit.Core >= 1.1.24",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.4",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.4",
       "Microsoft.AspNetCore.Mvc.WebApiCompatShim >= 2.2.0",
@@ -9393,6 +9433,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "LinqKit.Core": {
+            "target": "Package",
+            "version": "[1.1.24, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.4, )"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj": {}
+    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj": {
+    "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
+        "projectUniqueName": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj",
         "projectName": "BitCrunch",
-        "projectPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
+        "projectPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj",
         "packagesPath": "C:\\Users\\scull\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\obj\\",
+        "outputPath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\scull\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "LinqKit.Core": {
+              "target": "Package",
+              "version": "[1.1.24, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.4, )"

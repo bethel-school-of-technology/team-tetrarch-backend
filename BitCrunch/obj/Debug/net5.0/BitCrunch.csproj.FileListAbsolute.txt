@@ -167,3 +167,4 @@ C:\Users\scull\Documents\GitHub\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0
 C:\Users\scull\Documents\GitHub\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\scull\Documents\GitHub\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.WebApiCompatShim.dll
 C:\Users\scull\Documents\GitHub\team-tetrarch-backend\BitCrunch\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\scull\Documents\GitHub\team-tetrarch-backend\bitcrunch\bin\Debug\net5.0\LinqKit.Core.dll

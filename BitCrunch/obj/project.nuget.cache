@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "/yXLPNjsFuiUBXuZRNjzkVRYD5LiQ39oEKaVqTz3W6sIx6VaRMU0pRIwVT2UpW5J2h43zDcimOsb7cc5sHunLQ==",
+  "dgSpecHash": "N5JNauKFxgcthQNxZpZAvFT749hEBbBdl02DAT+SqaVbIvA3c2n2zgWHTh/8Ppfnt3/z5AMj0QFC2kvjqD2KUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\BitCrunch\\BitCrunch.csproj",
+  "projectFilePath": "C:\\Users\\scull\\Documents\\GitHub\\team-tetrarch-backend\\bitcrunch\\BitCrunch.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\scull\\.nuget\\packages\\azure.core\\1.4.1\\azure.core.1.4.1.nupkg.sha512",
     "C:\\Users\\scull\\.nuget\\packages\\azure.identity\\1.2.3\\azure.identity.1.2.3.nupkg.sha512",
     "C:\\Users\\scull\\.nuget\\packages\\azure.security.keyvault.certificates\\4.1.0\\azure.security.keyvault.certificates.4.1.0.nupkg.sha512",
     "C:\\Users\\scull\\.nuget\\packages\\azure.security.keyvault.secrets\\4.1.0\\azure.security.keyvault.secrets.4.1.0.nupkg.sha512",
     "C:\\Users\\scull\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\scull\\.nuget\\packages\\linqkit.core\\1.1.24\\linqkit.core.1.1.24.nupkg.sha512",
     "C:\\Users\\scull\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\scull\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\scull\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

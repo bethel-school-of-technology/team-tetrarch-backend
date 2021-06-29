@@ -32,6 +32,7 @@ namespace BitCrunch.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Item>> GetItem(int id)
         {
+            
             var item = await _context.Items.FindAsync(id);
 
             if (item == null)
@@ -43,16 +44,17 @@ namespace BitCrunch.Controllers
         }
 
         [HttpGet("name/{name}")]
-        public async Task<ActionResult<Item>> GetItembyName(string name)
+        public async Task<ActionResult<IEnumerable<Item>>> GetItemsbyName(string name)
         {
-            var item = await _context.Items.FindAsync(name);
+            List<Item> items = new List<Item>();
 
-            if (item == null)
+            items = await _context.Items.Where(item => item.ItemName.Contains(name)).ToListAsync();
+            bool isEmpty = !items.Any();
+            if (isEmpty)
             {
                 return StatusCode(418);
             }
-
-            return item;
+            return items;
         }
 
         [HttpGet("store/{name}")]
