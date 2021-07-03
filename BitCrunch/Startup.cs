@@ -33,8 +33,8 @@ namespace BitCrunch
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=BitCrunch.db"));
             
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAdB2C"));
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                //.AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAdB2C"));
 
             services.AddControllersWithViews();
             services.AddCors(c=> {

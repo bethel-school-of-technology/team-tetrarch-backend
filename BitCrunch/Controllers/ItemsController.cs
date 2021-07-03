@@ -58,16 +58,17 @@ namespace BitCrunch.Controllers
         }
 
         [HttpGet("store/{name}")]
-        public async Task<ActionResult<Item>> GetItembyStoreName(string name)
+        public async Task<ActionResult<IEnumerable<Item>>> GetItembyStoreName(string name)
         {
-            var item = await _context.Items.FindAsync(name);
+            List<Item> items = new List<Item>();
 
-            if (item == null)
+            items = await _context.Items.Where(item => item.StoreName.Contains(name)).ToListAsync();
+            bool isEmpty = !items.Any();
+            if (isEmpty)
             {
-                return NotFound();
+                return StatusCode(418);
             }
-
-            return item;
+            return items;
         }
 
         // PUT: api/Items/5
